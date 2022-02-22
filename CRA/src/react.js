@@ -13,6 +13,16 @@ export function createDOM(node) {
 
   return elememt;
 }
+//children => 가변인자
+export function createElement(tag,props,...children){
+  return { 
+      tag,
+      props,
+      children,
+    }
+  
+}
+
 
 export function render(vdom, container) {
   //dom

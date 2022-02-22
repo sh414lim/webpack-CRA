@@ -61,3 +61,7 @@ document.getElementById('container')
 - exclude => 특정파일제외
 
 # babel
+
+## 사용의 편의성 up
+- 세 개 의 속성을 갖고잇는 객체 함수 생성 => 반복 호출
+
