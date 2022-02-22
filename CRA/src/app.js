@@ -1,16 +1,5 @@
 //dom 보다 단순 한  형태의 돔
-
-function createDOM(node) {
-  if (typeof node === "string") {
-    return document.createTextNode(node);
-  }
-
-  const elememt = document.createElement(node.tag);
-
-  node.children.map(createDOM).forEach(elememt.appendChild.bind(elememt));
-
-  return elememt;
-}
+import { createDOM, render } from "./react";
 
 const vdom = {
   tag: "p",
@@ -27,17 +16,23 @@ const vdom = {
       children: [
         {
           tag: "li",
-          props: {},
+          props: {
+            style: "color:red",
+          },
           children: ["first item"],
         },
         {
           tag: "li",
-          props: {},
+          props: {
+            style: "color:blue",
+          },
           children: ["second item"],
         },
         {
           tag: "li",
-          props: {},
+          props: {
+            style: "color:green1",
+          },
           children: ["three item"],
         },
       ],
@@ -46,4 +41,5 @@ const vdom = {
 };
 
 //dom
-document.querySelector("#root").appendChild(createDOM(vdom));
+
+render(vdom, document.querySelector("#root"));
