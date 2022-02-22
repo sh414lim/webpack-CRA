@@ -49,12 +49,15 @@ document.getElementById('container')
 
 #### plugin
 
--> 출력결과를 만들어낼때 처리할 필요가 있는 일들이 있으면 그것만을 위한 '소프트웨어' 공간 프로세스를 따로 정의
+- 출력결과를 만들어낼때 처리할 필요가 있는 일들이 있으면 그것만을 위한 '소프트웨어' 공간 프로세스를 따로 정의
+  -plugin 의 n개의 소프트웨어를 설정 해주면 마지막 처리 과정 개입
 
 ### wwebpack.config.js
 
 - webpack 에 입력값으로 config 파일을 제공해주는 역할
 
--[]
+- rules 안에 지정하는것을 loader 라고 한다
+- test => 특정 확장자 파일
+- exclude => 특정파일제외
 
 # babel
