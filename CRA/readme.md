@@ -61,7 +61,14 @@ document.getElementById('container')
 - exclude => 특정파일제외
 
 # babel
-
+- babel-loader 은 트렌스 파일러 이다 => es6 이상의 문법으로 만들어진 코드는 특정타겟으로 변경
+- preset 세팅값 
+### @babel.preset-react
+- 자바스크립트 파일안에 포함되어 있는 jsx 즉 markup 은 아니지만 실제로 유사하구조의 문법을 react 갖고 잇는  createElement 라고 하는 함수 호출 구문으로 바꿔주는 역할을 포함
 ## 사용의 편의성 up
 - 세 개 의 속성을 갖고잇는 객체 함수 생성 => 반복 호출
 
+## jsx
+- dom으로 변환될 간단한 객체를만들기위해 그걸 편리함을 추구하기 위 마크업 구조의 새로운 표현방법을 개발 createElement 로 변환 
+- dom 다루기 힘들기때문에 헬퍼 함수를 만들고 간단한 구조물 만들기 성공
+- ui 구조 파악및 작성 의 힘듬 단점을 해결하는 방법

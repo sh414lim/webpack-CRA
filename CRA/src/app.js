@@ -1,3 +1,6 @@
+// @jsx createElement
+
+
 //dom 보다 단순 한  형태의 돔
 import { createDOM, render,createElement } from "./react";
 
@@ -40,15 +43,24 @@ import { createDOM, render,createElement } from "./react";
 //   ],
 // };
 
-const vdom2 =createElement('p',{},
-createElement('h1',{},"리액트 만들기"),
-createElement('ul',{},
-createElement("li",{style: "color:red",},"첫번째 아이템"),
-createElement("li",{style: "color:blue",},"두번째 아이템"),
-createElement("li",{style: "color:green",},"세번째 아이템")
-)
-);
+// const vdom2 =createElement('p',{},
+// createElement('h1',{},"리액트 만들기"),
+// createElement('ul',{},
+// createElement("li",{style: "color:red",},"첫번째 아이템"),
+// createElement("li",{style: "color:blue",},"두번째 아이템"),
+// createElement("li",{style: "color:green",},"세번째 아이템")
+// )
+// );
+
+const vdom3 = <p>
+  <h1>REACT 만들기</h1>
+  <ul>
+    <li style ="color:red">첫번째</li>
+    <li style ="color:blue">두번째</li>
+    <li style ="color:green">세번째</li>
+  </ul>
+</p>
+
 
 //dom
-
-render(vdom2, document.querySelector("#root"));
+render(vdom3, document.querySelector("#root"));
