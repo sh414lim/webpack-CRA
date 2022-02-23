@@ -4,6 +4,7 @@ export class Component {
   }
 }
 
+//Real Dom
 export function createDOM(node) {
   if (typeof node === "string") {
     return document.createTextNode(node);
@@ -52,7 +53,21 @@ export function createElement(tag, props, ...children) {
   }
 }
 
-export function render(vdom, container) {
-  //dom
-  container.appendChild(createDOM(vdom));
-}
+// export function render(vdom, container) {
+//   //dom
+//   container.appendChild(createDOM(vdom));
+// }
+
+export const render = (function () {
+  let prevDom = null;
+  //클로저를 만들기 위해서
+  return function (vdom, container) {
+    if (prevDom === null) {
+      prevDom = vdom;
+    }
+
+    //diff (기존의 값이  null 이 아니면)
+    container.appendChild(createDOM(vdom));
+  };
+  //업데이트 함수 로직
+})();
