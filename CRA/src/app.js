@@ -2,7 +2,7 @@
 
 
 //dom 보다 단순 한  형태의 돔
-import { createDOM, render,createElement } from "./react";
+import { createDOM, render,createElement,Component } from "./react";
 
 // const vdom = {
 //   tag: "p",
@@ -52,15 +52,26 @@ import { createDOM, render,createElement } from "./react";
 // )
 // );
 
-const vdom3 = <p>
-  <h1>REACT 만들기</h1>
+class Title extends Component{
+  render(){
+    return <h1>{this.props.children}</h1>
+  }
+}
+
+const Item = (props) =>{
+  return <li style={`color:${props.color}`}>{props.children}</li>
+}
+
+
+const App = <p>
+  <Title>REACT 만들기</Title>
   <ul>
-    <li style ="color:red">첫번째</li>
-    <li style ="color:blue">두번째</li>
-    <li style ="color:green">세번째</li>
+    <Item color="red">첫번째</Item>
+    <Item color="green">두번째</Item>
+    <Item color="blue">세번째</Item>
   </ul>
 </p>
 
 
 //dom
-render(vdom3, document.querySelector("#root"));
+render(App, document.querySelector("#root"));

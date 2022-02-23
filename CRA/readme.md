@@ -73,4 +73,7 @@ document.getElementById('container')
 - dom 다루기 힘들기때문에 헬퍼 함수를 만들고 간단한 구조물 만들기 성공
 - ui 구조 파악및 작성 의 힘듬 단점을 해결하는 방법
 ### -제약사항
-- 
+-
+
+## HOOK
+- 함수형 컴포넌에서 state  갖게 해준다
