@@ -64,6 +64,7 @@ document.getElementById('container')
 
 - babel-loader 은 트렌스 파일러 이다 => es6 이상의 문법으로 만들어진 코드는 특정타겟으로 변경
 - preset 세팅값
+-
 
 ### @babel.preset-react
 
@@ -83,6 +84,18 @@ document.getElementById('container')
 
 ## 함수형 컴포넌트
 
-- 
+- 외부 props 를 인자로 받는다
+- 즉시 호출
 
 ## 클래스 컴포넌트
+
+- props 를 context 로 주입 받는다
+- 생성자 intance 를 만들때 생성자가 props를 받는다
+- constructor 는 함수 컴포넌트에서 함수의 역할을 한다
+  [] 자바스크립트의 typeof 연산자를 가지고는 클래스 와 함수를 구분 못한다 둘다 함수라고 리턴한다
+  [] protype 가지고 구분
+  [] component 를 상속 받은 class 인지를 확인해야한다
+- 인스턴스를 만들고 컴포넌트가 삭제될때까지 유지하면 렌더 함수를 호출하게 작동(상태가진다)
+- 컴포넌트가 업데이될때 프롭스가 새로 전달 삭제될때 리액트가 알아서 라이프 사이클 메서드를 제공
+  ### 함수 vs 클래스
+  -

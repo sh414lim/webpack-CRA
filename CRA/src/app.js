@@ -1,7 +1,7 @@
 // @jsx createElement
 
 //dom 보다 단순 한  형태의 돔
-import { createDOM, render, createElement } from "./react";
+import { createDOM, render, createElement, Component } from "./react";
 
 // const vdom = {
 //   tag: "p",
@@ -56,13 +56,19 @@ const Item = (props) => {
   return <li style={`color:${props.color}`}>{props.children}</li>;
 };
 
-const Title = (props) => {
-  return <h1>{props.children}</h1>;
-};
+// const Title = (props) => {
+//   return <h1>{props.children}</h1>;
+// };
 
-const vdom3 = (
+class Title extends Component {
+  render() {
+    return <h1>{this.props.children}</h1>;
+  }
+}
+
+const App = () => (
   <p>
-    <Title label="React">React 정말 잘 만들기</Title>
+    <Title label="React">React 정말 클래스 컴포넌트 잘 만들기</Title>
     <ul>
       <Item color="red">첫번째</Item>
       <Item color="blue">두번째</Item>
@@ -72,4 +78,4 @@ const vdom3 = (
 );
 
 //dom
-render(vdom3, document.querySelector("#root"));
+render(<App />, document.querySelector("#root"));
