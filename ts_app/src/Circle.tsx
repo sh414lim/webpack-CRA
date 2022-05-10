@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import styled from "styled-components";
 
 //  const Contaier = styled.div<ContaierProps>`
@@ -13,11 +13,14 @@ interface ContaierProps {
 
 interface CircleProps {
   bgCikir: String;
+  borderColor?: string; //Optional
 }
 
 // function Cicle(props: CircleProps) {
 
 function Cicle({ bgCikir }: CircleProps) {
+  const [conter, setConter] = useState(1);
+
   const SayHello = (player: Player) => {
     return `Hello ${player.age} ${player.name}`;
   };
@@ -30,7 +33,7 @@ function Cicle({ bgCikir }: CircleProps) {
       {test}
       {test2}
 
-      {/* <Contaier bgCikir={bgCikir}/> */}
+      {/* <Contaier bgCikir={bgCikir} borderColor={borderColor ?? bgCkir}/> */}
     </>
   );
 }
